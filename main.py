@@ -1,14 +1,21 @@
 import sys
+import os
+from google.cloud import vision
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QPushButton, QFileDialog, QWidget, QTextEdit
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtCore import Qt
-import pytesseract
 import sympy as sp
 import cv2
 from PIL import Image
 
-# Tesseract 경로 설정 (필요시)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+# 환경 변수 설정 (다운로드한 JSON 키 파일의 경로를 입력해)
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\Users\XOTOURLLIFE\Desktop\json_key\mathemagics-425113-4c56defec84b.json'
+
+# Google Cloud Vision API 클라이언트 설정
+client = vision.ImageAnnotatorClient()
+
 
 class MathSolverApp(QMainWindow):
     def __init__(self):
@@ -37,49 +44,41 @@ class MathSolverApp(QMainWindow):
         self.layout.addWidget(self.button)
         self.widget.setLayout(self.layout)
         self.setCentralWidget(self.widget)
-        
+
     def loadImage(self):
         options = QFileDialog.Options()
         fileName, _ = QFileDialog.getOpenFileName(self, "Open Image File", "", "Image Files (*.png *.jpg *.bmp)", options=options)
         if fileName:
             self.processImage(fileName)
-    
-    def processImage(self, filePath):
-        # OpenCV로 이미지 읽기
-        image = cv2.imread(filePath)
-        
-        # 그레이스케일로 변환
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        
-        # 임계값 처리
-        _, thresh = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY_INV)
-        
-        # OCR로 텍스트 추출
-        text = pytesseract.image_to_string(thresh, config='--psm 6')
-        self.resultLabel.setText(f'Recognized Text: {text}')
-        
-        # 수학 문제 풀이
-        try:
-            solution = sp.sympify(text)
-            self.resultLabel.setText(f'Result: {solution}')
-        except Exception as e:
-            self.resultLabel.setText(f'Error: {str(e)}')
 
-        # 그레이스케일 이미지 표시
-        height, width = gray.shape
-        bytesPerLine = width
-        qImg_gray = QImage(gray.data, width, height, bytesPerLine, QImage.Format_Grayscale8)
-        self.label.setPixmap(QPixmap.fromImage(qImg_gray))
-        
-        # 이미지 표시
-        # height, width, channel = image.shape
-        # bytesPerLine = 3 * width
-        # qImg = QImage(image.data, width, height, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
-        # self.label.setPixmap(QPixmap.fromImage(qImg))
+    def processImage(self, fileName):
+        # OpenCV로 이미지 읽기
+        image = cv2.imread(fileName)
+        success, encoded_image = cv2.imencode('.jpg', image)
+        if not success:
+            raise Exception('Image encoding failed')    
+        content = encoded_image.tobytes()
+
+        image = vision.Image(content=content)
+        response = client.text_detection(image=image)
+        texts = response.text_annotations
+        if response.error.message:
+                raise Exception(f'{response.error.message}')
+
+        result = (texts[0].description).replace('\n', '') if texts else ""
+        latex = self.convert_to_latex(result)
+        self.resultLabel.setText(f"Result: {latex}")
+    
+    def convert_to_latex(self, text):
+        """Converts recognized text to LaTeX code."""
+        # 간단한 예제로서 변환 과정이 복잡할 수 있음
+        # 여기서는 단순히 인식된 텍스트를 반환
+        # 실제 구현에서는 수식을 인식하고 LaTeX으로 변환하는 로직이 필요
+        return text
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MathSolverApp()
     ex.show()
     sys.exit(app.exec_())
-
