@@ -64,12 +64,18 @@ class MathSolverApp(QMainWindow):
             self.resultLabel.setText(f'Result: {solution}')
         except Exception as e:
             self.resultLabel.setText(f'Error: {str(e)}')
+
+        # 그레이스케일 이미지 표시
+        height, width = gray.shape
+        bytesPerLine = width
+        qImg_gray = QImage(gray.data, width, height, bytesPerLine, QImage.Format_Grayscale8)
+        self.label.setPixmap(QPixmap.fromImage(qImg_gray))
         
         # 이미지 표시
-        height, width, channel = image.shape
-        bytesPerLine = 3 * width
-        qImg = QImage(image.data, width, height, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
-        self.label.setPixmap(QPixmap.fromImage(qImg))
+        # height, width, channel = image.shape
+        # bytesPerLine = 3 * width
+        # qImg = QImage(image.data, width, height, bytesPerLine, QImage.Format_RGB888).rgbSwapped()
+        # self.label.setPixmap(QPixmap.fromImage(qImg))
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
