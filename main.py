@@ -1,6 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QPushButton, QFileDialog, QWidget
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QPushButton, QFileDialog, QWidget, QTextEdit
+from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtCore import Qt
 import pytesseract
 import sympy as sp
@@ -22,7 +22,8 @@ class MathSolverApp(QMainWindow):
         self.label = QLabel(self)
         self.label.setGeometry(150, 50, 500, 300)
         
-        self.resultLabel = QLabel('Result: ', self)
+        self.resultLabel = QTextEdit('Result: ', self)
+        self.resultLabel.setReadOnly(True)
         self.resultLabel.setGeometry(150, 400, 500, 50)
         
         self.button = QPushButton('Load Image', self)
