@@ -21,6 +21,7 @@
 
 # Results
 [![Video Label](https://github.com/Jung-H-C/Mathemagics/assets/101037538/228c4cb4-6639-494f-a70c-cbec3e0c5101)](https://www.youtube.com/watch?v=yZZM25ATnuE)
+
 Click시 영상이 재생됩니다.
 
 # Validation Data
