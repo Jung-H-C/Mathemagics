@@ -18,7 +18,7 @@ chatgpt 4o의 도움을 받았습니다.
 유독 필체 인식을 응용한 기술은 연구가 느린것 같은데, 현재 개발된 기술가지고 충분히 상용화할 수 있지 않을까 하는 생각으로 프로그램을 제작해보게 되었습니다.
 
 # Results
-[![Video Label](http://img.youtube.com/vi/'yZZM25ATnuE'/0.jpg)](https://www.youtube.com/watch?v=yZZM25ATnuE)
+[![Video Label](http://img.youtube.com/vi/'yZZM25ATnuE'/0.jpg](https://github.com/Jung-H-C/Mathemagics/assets/101037538/228c4cb4-6639-494f-a70c-cbec3e0c5101)](https://www.youtube.com/watch?v=yZZM25ATnuE)
 
 
 
