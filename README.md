@@ -2,11 +2,11 @@
 
 <p align="center">
   <img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/b9fc0156-1d7b-4609-b321-3d4b591b81ed.png" width="200" height="200"/>
+  <br>
+  chatgpt 4o의 도움을 받았습니다.
 </p>
-chatgpt 4o의 도움을 받았습니다.
 
-설명:
-수학과 마술의 합성어 (Math + Magics)
+수학과 마술의 합성어 (Math + Magics)<br>
 구글링을 해본 결과 이미 여러곳에서 사용중인 네임이어서 슬펐지만 이 program이 그 취지에 가장 잘 맞게 사용된 사례라고 단언합니다.
 
 # Idea?
