@@ -34,20 +34,20 @@ Click시 영상이 재생됩니다.
 # Difficulties
 
 이상과 달리 프로그래밍에 어려움을 겪는 저는 많은 것을 포기해야 했습니다.
-원래 떠올린 "Tablet에서 바로 적용할 수 있는 필체 인식기술" 대신 해당 로직만을 중점으로 삼아 Windows App으로 구현하는 것으로 목표를 다시 설정했습니다/
+원래 떠올린 "Tablet에서 바로 적용할 수 있는 필체 인식기술" 대신 해당 로직만을 중점으로 삼아 Windows App으로 구현하는 것으로 목표를 다시 설정했습니다.
 가장 많은 노력을 기울인 부분은 "미분 기호"를 인식하여 미분을 처리하는 모델을 만드는 것이었으나, 제가 사용한 Google의 Vision API는 수학 용어보다는 주로 텍스트에 중점을 둔 모델이었습니다.
 이외에도 pytesseract 모듈이나 keras 모델을 다 시도해봤으나 실제 data로 했을 경우 필체 인식 성능이 좋지 않았습니다.
 
 # 핵심 기술
 
 ![image](https://github.com/Jung-H-C/Mathemagics/assets/101037538/bcfe8037-a441-4cb0-afc3-802e684a9456)
-우선 Google Cloud에서 제공하는 Vision API를 사용했습니다.
+Google Cloud에서 제공하는 Vision API를 사용했습니다.
 
 ![image](https://github.com/Jung-H-C/Mathemagics/assets/101037538/6f917655-f635-4c38-a828-cb8ccd1826a3)
-OpenCV로 파일을 읽어들어와 필체 인식 모델을 사용하여 필체 이미지를 text로 변환했습니다.
+OpenCV로 파일을 읽어 들어와 필체 인식 모델을 사용하여 필체 이미지를 text로 변환했습니다.
 
 ![image](https://github.com/Jung-H-C/Mathemagics/assets/101037538/9befe3c0-bd7b-4b84-a436-51a65f729252)
-추출한 text를 수학 식으로 변환하기 위한 refine_text함수를 이와 같이 정의하고 python 내장 eval()함수를 통해 수식을 풀이하는 logic 구현
+추출한 text를 수학 식으로 변환하기 위한 refine_text함수를 이처럼 정의하고 python 내장 eval메서드를 통해 수식을 풀이하는 logic을 구현했습니다.
 
 ![image](https://github.com/Jung-H-C/Mathemagics/assets/101037538/88729ea2-bbf9-4b2b-a305-db347f029af7)
-프로그램 안에 파일 탐색기 layout을 넣어 이전에 load한 사진을 저장해 손쉽게 불러올 수 있게끔 함.
+GUI에 QTreeView를 이용한 파일 탐색기 layout을 넣어 이전에 load한 사진을 저장하고 시각적으로 편리하게 불러올 수 있게끔 만들었습니다.
