@@ -1,6 +1,6 @@
 # Mathemagics
 
-(앱 아이콘)
+![mathemagics_icon](https://github.com/Jung-H-C/Mathemagics/assets/101037538/b9fc0156-1d7b-4609-b321-3d4b591b81ed)
 chatgpt 4o의 도움을 받았습니다.
 
 설명:
@@ -19,9 +19,10 @@ chatgpt 4o의 도움을 받았습니다.
 
 # Results
 [![Video Label](https://github.com/Jung-H-C/Mathemagics/assets/101037538/228c4cb4-6639-494f-a70c-cbec3e0c5101)](https://www.youtube.com/watch?v=yZZM25ATnuE)
+Click시 영상이 재생됩니다.
 
-
-
+# Validation Data
+![capture_01](https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2) | ![capture_02](https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85)
 # Difficulties
 이상과 달리 프로그래밍에 어려움을 겪는 저는 많은 것을 포기해야 했습니다.
 원래 떠올린 "Tablet에서 바로 적용할 수 있는 필체 인식기술" 대신 Concept만 가지고 Windows Application으로 해당 Logic만 구현 하는 것으로 눈을 낮춰서 목표를 재설정했습니다.
