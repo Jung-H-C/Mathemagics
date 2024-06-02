@@ -25,13 +25,13 @@
 Click시 영상이 재생됩니다.
 
 # Validation Data
-
-<figure class="half">
-  <a href="link"><img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2.png" width="400" height="400></a>
-  <a href="link"><img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85.png" width="400" height="400></a>
-  <figcaption>실제 시연영상에 사용한 데이터</figcaption>
-</figure>
-                   
+<p>
+  <figure class="half">
+    <a href="link"><img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2.png" width="400" height="400></a>
+    <a href="link"><img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85.png" width="400" height="400></a>
+    <figcaption>실제 시연영상에 사용한 데이터</figcaption>
+  </figure>
+                     </p>
                    
 # Difficulties
 이상과 달리 프로그래밍에 어려움을 겪는 저는 많은 것을 포기해야 했습니다.
