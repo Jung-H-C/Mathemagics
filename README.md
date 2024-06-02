@@ -1,6 +1,8 @@
 # Mathemagics
 
-<img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/b9fc0156-1d7b-4609-b321-3d4b591b81ed.png" width="200" height="200"/>
+<p align="center">
+  <img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/b9fc0156-1d7b-4609-b321-3d4b591b81ed.png" width="200" height="200"/>
+</p>
 chatgpt 4o의 도움을 받았습니다.
 
 설명:
