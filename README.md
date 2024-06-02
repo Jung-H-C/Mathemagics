@@ -25,8 +25,8 @@
 Click시 영상이 재생됩니다.
 
 # Validation Data
-<img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2.png" width="400" height="400>
-<img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85.png" width="400" height="400>
+<img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2.png" width="400" height="400">
+<img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85.png" width="400" height="400">
 
 실제 시연영상에 사용한 필기 data입니다. 
 
