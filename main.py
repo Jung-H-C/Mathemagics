@@ -3,15 +3,13 @@ import os
 from google.cloud import vision
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QPushButton, QFileDialog, QWidget, QTextEdit, QFileSystemModel, QTreeView
-from PyQt5.QtGui import QPixmap, QImage, QFont, QIcon, QMovie, QPainter
-from PyQt5.QtCore import Qt, QTimer, QSize, QModelIndex
-import sympy as sp
+from PyQt5.QtGui import QPixmap, QFont, QIcon
+from PyQt5.QtCore import Qt, QModelIndex
 import cv2
-from PIL import Image
 import shutil
 
 
-# 환경 변수 설정 (다운로드한 JSON 키 파일의 경로를 입력해)
+# Json Key
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\Users\XOTOURLLIFE\Desktop\json_key\mathemagics-425113-4c56defec84b.json'
 
 # Google Cloud Vision API 클라이언트 설정
