@@ -25,7 +25,13 @@
 Click시 영상이 재생됩니다.
 
 # Validation Data
-![capture_01](https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2) | ![capture_02](https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85)
+
+<figure class="half">
+  <a href="link"><img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/f4e30346-b1d6-4c41-b4b9-a1b301bc6dc2.png" width="400" height="400></a>
+  <a href="link"><img src="https://github.com/Jung-H-C/Mathemagics/assets/101037538/bacf7ae1-a882-4055-af02-061f30b16d85.png" width="400" height="400></a>
+</figure>
+                   
+                   
 # Difficulties
 이상과 달리 프로그래밍에 어려움을 겪는 저는 많은 것을 포기해야 했습니다.
 원래 떠올린 "Tablet에서 바로 적용할 수 있는 필체 인식기술" 대신 Concept만 가지고 Windows Application으로 해당 Logic만 구현 하는 것으로 눈을 낮춰서 목표를 재설정했습니다.
